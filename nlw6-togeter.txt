@@ -1,0 +1,86 @@
+Fluxo de um SPA:
+
+Como funciona o fluxo do ReactJS por baixo dos panos.
+
+	No modelo SPA criamos a nossa aplicação separada, são duas aplicações diferentes uma para o Backend e a outra para o Frontend (códigos isolados um do outro),
+	essa aplicação que criamos para o Frontend ela vai ter toda a parte visual dentro dela, então todo HTML, CSS e JavaScript da aplicação Frontend (app01), essa
+	aplicação vai está públicada em algum lugar e os usuários iram acessar ela da mesma forma que eles acessam uma aplicação Tradicional.
+	Já o servidor o Backend (app02) essa aplicação vai ser contruida com tecnologia Backend (Java, PHP, Node.js, Golang...), a aplicação Frontend (app01) quando o
+	usuário acessa o app é essa aplicação que ele vai está acessando -> HTML, CSS, JS -> ou sejá todo HTML, CSS, JS vai está disponivel para o usuário nesta aplicação
+	quando ele acessar uma rota no meu app, ex: rota para listar contatos '/contatos', ao invés do meu Backend retornar para o Frontend na hóra que ele carregar todos os 
+	dados, retornar todo o HTML CSS JS (como a uma aplicação tradicional faz), o que o Backend vai retornar para a gente são apenas os dados dessa rota '/contatos', os
+	dados são apenas as informações que meu app01 precisa para conseguir mostrar em tela, em '/contatos' eu tenho nome, idade, endereço, email são esses dados que serão
+	retornados em tela, quando eu trago só os dados do usuário e não todo aquele HTML para formar os contatos, eu caiu de uma requisição de 50KB/40KB para uma requisição
+	de 1KB/2KB, e esses dados precisa de um formato para ser retornados do Backend para o Frontend, nesse caso vou retornar usando de um formato global utilizado pelas
+	grandes as maiorias das linguagens JSON, o JSON é a sigla de JavaScript Object Notation ou sejá notação de um objeto no JavaScript.
+	Agora que que tenho duas aplicações o que eu consigo fazer é distribuir as responsabilidades, a nossa aplicação Backend o app02 ela vai está responsável apenas pela
+	parte que ela precisa  ser responsável que são as partes de regras de négocios, altenticação, lidar com banco de dados, cuidar das partes que são mais funcional da
+	aplicação, enquando a aplicação app01 que é formada de HTML, CSS e JavaScript com algum Framework como (React, Vue, Angular...) ela vai ser responsável por interagir
+	com o servidor o Backend, buscar dados, o servidor está sempre mandando dados para a gente e transformar a estrutura que dados que está vindo do Backend o JSON em
+	visualização em algo visual para o usuário final.
+	Então quem vai converter esses dados em JSON vindo o Backend é nossa aplicação app01 o Frontend a aplicação app02 vai ser responsável por apenas dar os dados para
+	a aplicação app01.
+	
+	Conclusão:
+		Além da aplicação ficar muito mais performatico, quando a gente conecta nessa aplicação app01 com alguma biblioteca de construção como React a gente consegue
+		deixar a manipulação desses dados e a forma como que a gente mostre esses dados para o usuário e deixo o usuário interagir com esses dados extremamente mais flexível
+		mais interativa, de uma forma que o usuário se sinta mais melhor utilizando essa aplicação SPA.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+FireBase:
+
+	É uma ferramento desenvolvida pelo o Google, essa ferramenta trás vários funcionalidades que são muito comuns em a gente ter na nossa aplicação que as vezes fica chato a gente ter que
+	ficar criando toda a vez aquilo do zero ou quando a gente quer colocar um projeto no ar mais rápido. o FireBase é muito bom para isso. Principalmente quando a gente precisa de velocidade
+	e a gente não der dando conhecimento na parte do backend, então o FireBase é um Banking as a Service, é a proposta do Firebase, fornecer grande parte das funcionalidades que a gente
+	teria na camada no Backend (Java, PHP, Node.js, Golang...) como um serviço, é um Backend pronto para mim usar e eu manipulo ele atraves da minha propria interface que tenho no meu perfil
+	do site do Firebase.
+	Vamos utilizar dois serviços do Firebase, autenticação -> que é de uma pessoa de autenticar na minha aplicação com sua conta do google. Segundo ponto que vou utilizar Banco de dados
+	-> o Firebase oferece duas alternativas de banco de dados, então a gente consegue armazenar dados dentro do Firebase, consumir esses dados, salvar, listar informações, editar, deletar
+	e tudo mais o Firebase oferece tudo isso para a gente, é como a gente tivesse um banco de dados um SGBD (Sistema de gerenciamento de banco de dados) dentro do Firebase, a gente consegue
+	ir lá criar registros, deletar, listar e por ai vai... e a gente vai conseguir fazer as operações do banco de dados direto da nossa aplicação na aplicação aonde está rodando o meu Frontend.
+	
+	conclusão:
+		Firebase faz sentido em todas as aplicações?
+		Talvez não, porque o mais importante do Firebase é principalmente quando você está querendo colocar uma ideia rápida tirada do papel e colocar em prática, não quer
+		dizer que o Firebase não sirva para aplicações grandes, quer dizer que em aplicações maiores você vai utilizando cada vez menos recursos do Firebase e focando em utilizar esses
+		recursos mais em especificos do Firebase para a funcionalidades especificas da aplicação, é provável que você comece quando sua aplicação fica grande utilizar o Firebase para
+		resolver uma funcionalidade especifica do seu app mas não todo o app estando dentro do firebase, não só com o Firebase mas com toda as alternativas Banking as a Service.
+		
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Codigo aula 1:
+	# together
+
+Codigo aula :
+	# unidade
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
