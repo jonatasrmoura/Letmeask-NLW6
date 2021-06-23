@@ -28,7 +28,8 @@ export function AuthContextProvider(props: AuthContextProviderProps) {
 
   useEffect(() => {
     /* Verificar se um usuário já tinha se logado anteriormente,
-    ele vai retornar esse usuário */
+    ele vai retornar esse usuário, caso ele de um F5 ou fecha o navegador
+    para os dados dele não se perderem */
     const unsubscribe = auth.onAuthStateChanged(user => {
       if (user) {
         const { displayName, photoURL, uid } = user;
